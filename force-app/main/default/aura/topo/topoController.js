@@ -14,6 +14,12 @@
         aleatorio < 0.5 ? $A.util.addClass(topo, 'active') : $A.util.addClass(topo, 'inactive') ;
 
         aleatorio < 0.5 ? component.set("v.isActive", true) : component.set("v.isActive", false);
+        // aleatorio < 0.5 ? component.set("v.isTopo", true) : component.set("v.isTopo", false);
+        if(aleatorio < 0.5){
+            component.set("v.isTopo", true)
+        }else{
+            component.set("v.isTopo", false);
+        }
         
     },
     topoClicks : function(component) {
