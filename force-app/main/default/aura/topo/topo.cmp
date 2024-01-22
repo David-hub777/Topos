@@ -1,9 +1,8 @@
 <aura:component>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:attribute name="isActive" type="Boolean" default="false"/> <!-- borrar -->
-    <aura:application name="isTopo" type="Boolean" default="false"/>
-    <span onclick="{!c.topoClicks}" aura:id="topo" class="topo">5</span>
-    
+    <aura:attribute name="isTopo" type="Boolean" />
+    <span onclick="{!c.topoClick}" aura:id="topo" class="topo">5</span>
 
     <!-- <aura:attribute name="nombre" type="String" default="Mundo"/>
     <h1>Hola {!v.nombre}</h1>
@@ -14,7 +13,5 @@
     <lightning:button onclick="{!c.removeCSS}" label="Remove Style" />
     <h1></h1> -->
 
-
     <!-- <lightning:button aura:id="topo" label="Click Me" onclick="{!c.changeButtonStyle}"/> -->
-    
 </aura:component>

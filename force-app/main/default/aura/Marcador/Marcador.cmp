@@ -1,4 +1,5 @@
 <aura:component>
+    <aura:handler event="c:Puntuacion" action="{!c.manejarEvento}"/>
     <aura:attribute name="marcador" type="Integer" default="0"/>
 	<h1>Marcador: {!v.marcador}</h1>
-</aura:component>	
+</aura:component>
