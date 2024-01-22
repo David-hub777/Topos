@@ -10,16 +10,36 @@
     },
     doInit : function(component, event, helper) {
         var topo = component.find('topo');
-        var aleatorio = Math.random();
-        aleatorio < 0.5 ? $A.util.addClass(topo, 'active') : $A.util.addClass(topo, 'inactive') ;
-
-        aleatorio < 0.5 ? component.set("v.isActive", true) : component.set("v.isActive", false);
-        // aleatorio < 0.5 ? component.set("v.isTopo", true) : component.set("v.isTopo", false);
-        if(aleatorio < 0.5){
-            component.set("v.isTopo", true)
-        }else{
-            component.set("v.isTopo", false);
-        }
+        var randomNumberGeneratorClass = component.get("c.random");
+        randomNumberGeneratorClass.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                // Lo que tenía antes de Apex
+                var aleatorio = response.getReturnValue();
+                console.log("aleatorio: " + aleatorio);
+                aleatorio < 0.5 ? $A.util.addClass(topo, 'active') : $A.util.addClass(topo, 'inactive') ;
+                aleatorio < 0.5 ? component.set("v.isActive", true) : component.set("v.isActive", false);
+                aleatorio < 0.5 ? component.set("v.isTopo", true) : component.set("v.isTopo", false);
+                if(aleatorio < 0.5){
+                    component.set("v.isTopo", true)
+                }else{
+                    component.set("v.isTopo", false);
+                }
+                // Fin de lo que tenía antes de la llamada a Apex
+            }else{
+                console.log("Error: " + state);
+            }
+        });
+        // var aleatorio = $A.callback();
+        // console.log("aleatorio: " + aleatorio);
+        // aleatorio < 0.5 ? $A.util.addClass(topo, 'active') : $A.util.addClass(topo, 'inactive') ;
+        // aleatorio < 0.5 ? component.set("v.isActive", true) : component.set("v.isActive", false);
+        // // aleatorio < 0.5 ? component.set("v.isTopo", true) : component.set("v.isTopo", false);
+        // if(aleatorio < 0.5){
+        //     component.set("v.isTopo", true)
+        // }else{
+        //     component.set("v.isTopo", false);
+        // }
     },
     // topoClicks : function(component) {
     //     var topoClass = component.get('v.isActive');

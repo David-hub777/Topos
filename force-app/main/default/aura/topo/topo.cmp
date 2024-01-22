@@ -1,6 +1,6 @@
-<aura:component>
+<aura:component controller="RandomApex">
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-    <aura:attribute name="isActive" type="Boolean" default="false"/> <!-- borrar -->
+    <aura:attribute name="isActive" type="Boolean" /> <!-- borrar -->
     <aura:attribute name="isTopo" type="Boolean" />
     <span onclick="{!c.topoClick}" aura:id="topo" class="topo">5</span>
 
