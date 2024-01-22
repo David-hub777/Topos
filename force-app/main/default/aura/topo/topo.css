@@ -1,0 +1,17 @@
+.THIS.changeMe {
+    background-color:yellow;
+    width:200px;
+}
+.THIS.inactive{
+    width: 100px;
+    background-color: red;
+}
+
+.THIS.active{
+    background-color: green;
+}
+
+.THIS.topo {
+	width: 30px;
+	height: 30px;
+}

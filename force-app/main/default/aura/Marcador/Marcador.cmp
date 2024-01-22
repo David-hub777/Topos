@@ -1,0 +1,4 @@
+<aura:component>
+    <aura:attribute name="marcador" type="Integer" default="0"/>
+	<h1>Marcador: {!v.marcador}</h1>
+</aura:component>	
