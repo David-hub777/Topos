@@ -3,4 +3,5 @@
     <aura:attribute name="marcador" type="Integer" default="0"/>
 	<h1>Marcador: {!v.marcador}</h1>
     <input type="button" name="boton" value="Sumar" onclick="{!c.sumar}"/>
+    <input type="button" onclick="{!c.guardarScore}"/>
 </aura:component>

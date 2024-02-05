@@ -1,12 +1,16 @@
 <aura:application>
-	<h1>Proyecto</h1><br/>
-	<c:topo/>
-	<c:topo/>
-	<c:topo/>
-	<c:topo/>
-	<c:topo/>
-	<c:topo/>
-	<c:topo/>
-	<c:topo/>
+	<c:Topo/>
+	<c:Topo/> 
+	<c:Topo/> 
+	<c:Topo/> 
+	<c:Topo/>
+	<c:Topo/> 
+	<c:Topo/>    
+	<c:Topo/> 
 	<c:Marcador/>
+	<div/>
+	<div/>
+	<div/>
+	<div/>
+	<c:TablaPuntuaciones/>
 </aura:application>

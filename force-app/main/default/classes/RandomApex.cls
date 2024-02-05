@@ -17,18 +17,18 @@ public with sharing class RandomApex {
         if (Schema.sObjectType.Account.isCreateable()) {
             insert a;
         }
-    }
+    } 
 
     // 
     @AuraEnabled
     public static List<Account> getListScores() {
         try {
-            if (Schema.sObjectType.Account.isAccessible()) {
+            // if (Schema.sObjectType.Account.isAccessible()) {
                 Account[] accounts = [SELECT Name, BillingCity FROM Account];
-            }
+            // }
             return accounts;
         } catch (Exception e) {
-            return e.getMessage();
+            return null;
         }
     }
 }
